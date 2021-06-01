@@ -32,4 +32,9 @@ func main() {
 	for k, v := range m {
 		fmt.Println(k, v)
 	}
+
+	//delete a record from the map
+	delete(m, "Iranga")
+	fmt.Println(m)
+
 }
