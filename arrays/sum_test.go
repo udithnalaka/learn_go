@@ -51,6 +51,17 @@ func TestSum(t *testing.T) {
 		if !reflect.DeepEqual(actual, expected) {
 			t.Errorf("actual %d , expected %d", actual, expected)
 		}
+	})
+
+	t.Run("delete from slice", func(t *testing.T) {
+		numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+		actual := removeFromSlice(numbers)
+		expected := []int{1, 2, 5, 6, 7, 8, 9}
+
+		if len(actual) != len(expected) {
+			t.Errorf("got %d want %d", actual, expected)
+		}
 
 	})
 }

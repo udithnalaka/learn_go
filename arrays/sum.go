@@ -28,6 +28,10 @@ func SumAllTail(numbersToAdd ...[]int) []int {
 	for _, numbers := range numbersToAdd {
 		sums = append(sums, numbers[len(numbers)-1])
 	}
-
 	return sums
 }
+
+func removeFromSlice(number []int) []int {
+	return append(number[:2], number[4:]...)
+}
+
